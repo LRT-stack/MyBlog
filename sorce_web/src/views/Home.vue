@@ -1,25 +1,14 @@
 <template>
   <div class="home">
-    <el-container>
-      <el-header>
-          <Head />
-      </el-header>
-
-      <el-main>
-        <router-view />
-      </el-main>
-
-      <el-footer>Footer</el-footer>
-    </el-container>
+    home
   </div>
 </template>
 
 <script>
-import Head from '@/components/Head.vue'
 export default {
   name: "Home",
   components: {
-    Head
+   
   },
   data() {
     return {};
@@ -33,7 +22,12 @@ export default {
   background-color: transparent;
   color: gray;
   text-align: center;
+  height: 60px;
   line-height: 60px;
+  position: fixed;
+  top:0;
+  left: 0;
+  right: 0;
 }
 .el-footer {
   background-color: #b3c0d1;
