@@ -1,12 +1,119 @@
 /* PC端 */
 @media (min-width: 768px) and (max-width: 3000px) {     
-    .hide-mob{
+    .hide-pc{
         display: none;
     }
-    .container-fluid{
+    .container-fluid,.row,ul{
         margin: 0;
         padding: 0;
     }
+    /* 菜单start */
+    .logo{
+        background: url('/imgs/logo.png') no-repeat center center;
+        background-size: 10%;
+    }
+    .logo a{
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        background: url('/imgs/logo.png') no-repeat center center;
+        background-size: 100%;
+    }
+    .head-row{
+        position: fixed;
+        top : 20px;
+        height: 70px;
+        line-height: 70px;
+        background-color: transparent;
+        color: white;
+        width: 100%;
+    }
+    .one-menu-li,.one-menu-li a{    
+        text-decoration: none;   
+        font-size: 16px;
+        padding: 0 10px;
+        color: rgba(255, 255, 255, 0.5);
+        position: relative;
+        cursor: pointer;
+    }
+    .one-menu-li:hover{
+        color: white;
+    }
+    .two-menu:before{
+        content: "";
+        border-bottom: 10px solid rgba(255,255,255,.3);
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        position: absolute;
+        top: -10px;
+        left: 40%;
+    }
+    .two-menu{
+        position: absolute;
+        top: 70px;
+        left: -20px;
+        width: 120px;
+        background-color: rgba(255,255,255,.3);
+        padding: 10px;
+        border-radius: 5px;
+        display: none;
+    }
+    .two-menu ul li{
+        line-height: 35px;
+    }
+    .two-menu a{
+        color: rgba(255,255,255,.8)!important;
+    }
+    .two-menu a:hover{
+        color: white!important;
+    }
+    .login-btn{             /* 登录按钮 */
+        font-size: 14px;
+        background-color: white;
+        border-radius: 16px;
+        padding: 5px 20px;
+        color: #52d3aa;
+        cursor: pointer;
+    }
+    .login-btn:hover{            
+      box-shadow: 0 10px 15px rgba(0,0,0,.2);
+    }
+    /* 菜单end */
+
+    .gtco-header{
+        padding-top: 300px;
+        height: 800px;
+        background: url('/imgs/k1.jpg') center center;
+        background-size: 100%;
+    }
+    .fadeIn{
+        color: white;
+        font-weight: bold;
+    }
+    .fadeIn p:nth-child(1){
+        font-family: "HK Grotesk Legacy";
+        color: #FFC576;
+        font-size: 40px;
+        line-height: 42px;
+        font-weight: 500;
+    }
+    .fadeIn p:nth-child(2){
+        font-size: 100px;
+        line-height: 100px;
+        font-family: "Playfair Display", serif;
+        margin: 12px 0 0;
+    }
+    .fadeIn p:nth-child(3){
+        font-family: "HK Grotesk Legacy";
+        font-size: 30px;
+        line-height: 30px;
+        font-weight: 500;
+        margin: 46px 0 0;
+    }
+    /* .fadeIn:hover{
+        color : #81db34;
+    } */
 }
 
 
@@ -14,9 +121,20 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 /* 移动端 */
-@media (min-width: 374px) and (max-width: 768px) {     
-    .hide-pc{
+@media (min-width: 0) and (max-width: 768px) {     
+    .hide-mob{
         display: none;
     }
 }
