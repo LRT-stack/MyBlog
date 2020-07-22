@@ -83,9 +83,11 @@
 
     .gtco-header{
         padding-top: 300px;
-        height: 800px;
-        background: url('/imgs/k1.jpg') center center;
-        background-size: 100%;
+        height: 750px;
+        background-image: url('/imgs/k1.jpg');
+        background-size: cover;
+        background-position: top center;
+        background-repeat: no-repeat;
     }
     .fadeIn{
         color: white;
