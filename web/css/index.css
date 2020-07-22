@@ -1,0 +1,22 @@
+/* PC端 */
+@media (min-width: 768px) and (max-width: 3000px) {     
+    .hide-mob{
+        display: none;
+    }
+    .container-fluid{
+        margin: 0;
+        padding: 0;
+    }
+}
+
+
+
+
+
+
+/* 移动端 */
+@media (min-width: 374px) and (max-width: 768px) {     
+    .hide-pc{
+        display: none;
+    }
+}
