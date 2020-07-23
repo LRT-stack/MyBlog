@@ -1,5 +1,43 @@
+/* 公共样式 */
+.gtco-header{
+    padding-top: 300px;
+    height: 750px;
+    background-image: url('/imgs/k1.jpg');
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+.fadeIn{
+    color: white;
+    font-weight: bold;
+}
+.fadeIn p:nth-child(1){
+    font-family: "HK Grotesk Legacy";
+    color: #FFC576;
+    font-size: 40px;
+    line-height: 42px;
+    font-weight: 500;
+}
+.fadeIn p:nth-child(2){
+    font-size: 100px;
+    line-height: 100px;
+    font-family: "Playfair Display", serif;
+    margin: 12px 0 0;
+}
+.fadeIn p:nth-child(3){
+    font-family: "HK Grotesk Legacy";
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 500;
+    margin: 46px 0 0;
+}
+
+
+
+
+
 /* PC端 */
-@media (min-width: 768px) and (max-width: 3000px) {     
+@media (min-width: 769px) and (max-width: 3000px) {     
     .hide-pc{
         display: none;
     }
@@ -80,42 +118,6 @@
       box-shadow: 0 10px 15px rgba(0,0,0,.2);
     }
     /* 菜单end */
-
-    .gtco-header{
-        padding-top: 300px;
-        height: 750px;
-        background-image: url('/imgs/k1.jpg');
-        background-size: cover;
-        background-position: top center;
-        background-repeat: no-repeat;
-    }
-    .fadeIn{
-        color: white;
-        font-weight: bold;
-    }
-    .fadeIn p:nth-child(1){
-        font-family: "HK Grotesk Legacy";
-        color: #FFC576;
-        font-size: 40px;
-        line-height: 42px;
-        font-weight: 500;
-    }
-    .fadeIn p:nth-child(2){
-        font-size: 100px;
-        line-height: 100px;
-        font-family: "Playfair Display", serif;
-        margin: 12px 0 0;
-    }
-    .fadeIn p:nth-child(3){
-        font-family: "HK Grotesk Legacy";
-        font-size: 30px;
-        line-height: 30px;
-        font-weight: 500;
-        margin: 46px 0 0;
-    }
-    /* .fadeIn:hover{
-        color : #81db34;
-    } */
 }
 
 
@@ -134,9 +136,97 @@
 
 
 
-/* 移动端 */
+/* 移动端-mob */
 @media (min-width: 0) and (max-width: 768px) {     
     .hide-mob{
         display: none;
     }
+    /* 菜单start */
+    .mob-menu{
+        position: absolute;
+        top:0;
+        z-index: 901;
+    }
+    .head-mob-row1{
+        height: 60px;
+        line-height: 60px;
+        background-color: black;
+    }
+    .mob-logo{
+        background: url('/imgs/logo.png') no-repeat 15% center;
+        background-size: 35%;
+    }
+    .menu-bt{
+        padding-right: 3%;
+    }
+    .menu-div{
+        position: fixed;
+        top : 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: transparent;
+        color: rgb(255, 255, 255);
+        /* padding-right: 14%; */
+        background-color: black;
+    }
+    .cancel-bt{
+        height: 60px;
+        line-height: 60px;
+        padding-right: 0;
+    }
+    .one-menu-mob li,.one-menu-mob a{
+        font-size: 16px;
+        text-decoration: none;
+        color: white;
+        line-height: 40px;
+        position: relative;
+    }
+    .one-menu-mob li[show='true']:after {
+        position: absolute;
+        right: 25px;
+        top: 13px;
+        content: " ";
+        display: inline-block;
+        height: 10px;
+        width: 10px;
+        border-width: 2px 2px 0 0;
+        border-color: #FFFFFF;
+        border-style: solid;
+        -webkit-transform: matrix(-0.71, 0.71,0.71, 0.71, 0, 0);
+        transform: matrix(0.71, -0.71, -0.71, -0.71, 6, 1);   
+    }
+    .down:after{
+        transform: matrix(-0.71, 0.71, -0.71, -0.71, 12, -4)!important;
+    }
+    .two-menu-mob{
+        padding-left: 30%;
+        display: none;
+    }
+    .two-menu-mob ul li,.two-menu-mob ul li a{
+        line-height: 30px!important;
+    }
+    /* 菜单end */
+
+    
+    .gtco-header{
+        padding-top: 200px;
+        height: 600px;
+    }
+    .head-mob-row2{
+        display: none;
+    }
 }
+
+
+/* 移动端-ipad */
+@media (min-width: 768px) and (max-width: 768px) {
+    .mob-logo{
+        background-size: 20%;
+    }
+    .cancel-bt{
+        padding-right: 3%;
+    }
+}  
+
+
