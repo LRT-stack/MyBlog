@@ -49,5 +49,30 @@ function menuFunMOB(){
     
 }
 
+//PC登录
+var loginFun = function(){
+    //取消按钮
+    $('.cancel-login').click(function(){        
+        $('.logindiv').animate({'top':'-500px'},'slow');
+    });
+
+    //登录框弹出动画
+    $('.login-btn').click(function(){
+        $('.logindiv').animate({'top':'100px'},'slow');
+    });
+
+    //登录框背景放大缩小动画
+    $('.logindiv').mouseenter(function(){
+        $(this).animate({'background-size':'110%'},'slow');
+    }).mouseleave(function(){
+        $(this).animate({'background-size':'100%'},'slow');
+    });
+
+   
+}
+
+
+
 menuFunPC();
 menuFunMOB();
+loginFun();
