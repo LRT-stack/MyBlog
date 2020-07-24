@@ -24,29 +24,46 @@ function menuFunPC() {
 //菜单移动端
 function menuFunMOB() {
     $('.one-menu-mob li').click(function () {     //点击一级菜单
-        // if($(this).find('.two-menu-mob')){          
-        //     $(this).addClass('down');           //箭头向下
-        //     $(this).find('.two-menu-mob').toggle(); //二级菜单
-        // }
+        if ($(this).hasClass('down')) {
+            $(this).removeClass('down');
+            $(this).find('.two-menu-mob').toggle(); //二级菜单
+        } else {
+            //关闭其他的兄弟节点的二级菜单
+            $(this).siblings().removeClass('down');
+            $(this).siblings().find('.two-menu-mob').hide();
 
-        // if($(this).find('.two-menu-mob').hide()){
-        //     $(this).removeClass('down');           
-        // }
+            $(this).addClass('down');               //展开二级菜单
+            $(this).find('.two-menu-mob').toggle(); //二级菜单
+        }
 
-        // if($(this).find('.two-menu-mob').hide()){
-        //     $(this).addClass('down');           //箭头向下
-        //     $(this).find('.two-menu-mob').toggle();
-        // }else{
-        //     $(this).removeClass('down');           //箭头向下
-        //     $(this).find('.two-menu-mob').toggle();
-        // }
     });
 
-    $('.menu-bt img,.cancel-bt img').click(function () {
-        $('.head-mob-row2').toggle();
+    //点击菜单按钮
+    $('.menu-bt img').click(function () {
+        $('.menu-div').animate({ 'right': '0' }, 'slow');
     });
 
+    //点击菜单取消按钮
+    $('.cancel-bt img').click(function () {
+        $('.menu-div').animate({ 'right': '-75%' }, 'slow');
+        $('.one-menu-mob li').removeClass('down');
+        $('.two-menu-mob').hide();
+    });
 
+    //点击菜单中登录按钮
+    $('.mob-login-btn').click(function () {
+        $('.menu-div').animate({ 'right': '-75%' }, 'slow'); //隐藏菜单
+        $('.one-menu-mob li').removeClass('down');
+        $('.two-menu-mob').hide();
+        setTimeout(function(){
+            $('.mob-login-div').animate({ 'right': '0' }, 'slow'); //显示登录
+        },800)
+    });
+
+    //点击登录页面中的取消按钮
+    $('.cancel-login-mob').click(function(){
+        $('.mob-login-div').animate({ 'right': '-100%' }, 'slow'); //显示登录
+    });
 }
 
 //PC登录

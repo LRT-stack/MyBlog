@@ -1,3 +1,57 @@
+/* 公共样式 */
+body{
+    text-align: center;
+    /* 禁止复制 */
+    -moz-user-select: none; /*火狐*/
+    -webkit-user-select: none; /*webkit浏览器*/
+    -ms-user-select: none; /*IE10*/
+    -khtml-user-select: none; /*早期浏览器*/
+    user-select: none;
+}
+.hide{
+    display: none;
+}
+.gtco-header{
+    padding-top: 300px;
+    height: 750px;
+    background-image: url('/imgs/headbg.jpg');
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+.fadeIn{
+    color: white;
+    font-weight: bold;
+}
+.fadeIn p:nth-child(1){
+    font-family: "HK Grotesk Legacy";
+    color: #FFC576;
+    font-size: 40px;
+    line-height: 42px;
+    font-weight: 500;
+}
+.fadeIn p:nth-child(2){
+    font-size: 100px;
+    line-height: 100px;
+    font-family: "Playfair Display", serif;
+    margin: 12px 0 0;
+}
+.fadeIn p:nth-child(3){
+    font-family: "HK Grotesk Legacy";
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 500;
+    margin: 46px 0 0;
+}
+
+
+
+
+
+
+
+
+
 /* PC端 */
 @media (min-width: 769px) and (max-width: 3000px) {     
     .hide-pc{
@@ -184,13 +238,7 @@
 
 
 
-
-
-
-
-
-
-
+ 
 
 
 
@@ -221,9 +269,8 @@
     .menu-div{
         position: fixed;
         top : 0;
-        right: 0;
+        right: -75%;
         bottom: 0;
-        left: 0;
         background-color: transparent;
         color: rgb(255, 255, 255);
         /* padding-right: 14%; */
@@ -267,13 +314,120 @@
     }
     /* 菜单end */
 
+    /* 登录start */
+    .mob-login-div{
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: -100%;
+        width: 100%;
+        background: url('/imgs/loginbg.jpg') no-repeat;
+        background-size: cover;
+        z-index: 903;
+        padding: 20px 20px;
+    }
+    .mob-logo-div{
+        margin: 10px 0;
+    }
+    .logindiv{
+        position: fixed;
+        top : -400px;
+        right: 130px;
+        /* left: 45%; */
+        width: 400px;
+        height: 400px;
+        z-index: 900;
+        background-color: #494657;
+        border-radius: 10px;
+        padding: 15px 20px;
+        background: url('/imgs/loginbg.jpg') no-repeat;
+        background-size: 100%;
+    }
+    .cancel-login{
+        cursor: pointer;
+    }
+    input{        /* 输入框去除边框 */
+        outline:medium;
+    }
+    .acc,.pwd,.pwd2,.valieCode,.valieCode2,.loginVal{
+        background: transparent;
+        border : 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+        width: 75%;
+        height: 30px;
+        margin-top: 10px;
+        color: white;
+    }
+    .code-bt,.code-bt2,.loginCode-bt{
+        width: 100%;
+    }
+    .valieCode,.valieCode2,.loginVal{            /* 验证码输入框 */
+        width: 170px;
+    }
+    .getVal,.getCode,.getCode2{                /* 获取验证码的按钮 */
+        color: rgba(255, 255, 255, 0.5);
+        background-color: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        cursor: pointer;
+        border-radius: 3px;
+        padding: 5px 3px;
+        font-size: 14px;
+        width: 110px;
+    }
+    .login-form{
+        margin-top: 10px;
+    }
+    .lock-regin{
+        margin-left: 12.5%;
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+    }
+    .lock{
+        padding-left: 20px;
+        font-size: 14px;
+        color: white;
+        cursor: pointer;
+        background: url('/imgs/lock.png') no-repeat left center;
+        background-size: 20%;
+    }
+
+    .reginspan,.loginspan{
+        font-size: 14px;
+        color: white;
+        margin-left: 12%;
+    }
+    .regin-a,.login-a{
+        font-weight: bold;
+        cursor: pointer;
+        color: #5d9cec!important;
+    }
+    .login-sub{
+        margin-top: 40px;
+    }
+
+    .login-bt,.regin-bt,.submit-bt{
+        margin-left: 12.5%;
+        width: 75%;
+        line-height: 35px;
+        background-color: transparent;
+        border-radius: 5px;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        color: rgba(255, 255, 255, 0.5);
+        cursor: pointer;
+    }
+    .login-bt:hover,.regin-bt:hover,.submit-bt:hover{
+        border: 1px solid rgba(255, 255, 255, 0.7);
+        color: rgba(255, 255, 255, 0.7);
+    }
+    .stopClick{     /* 禁止点击 */
+        pointer-events:none;
+    }
+    /* 登录end */
     
     .gtco-header{
         padding-top: 200px;
         height: 600px;
-    }
-    .head-mob-row2{
-        display: none;
     }
 }
 
@@ -286,55 +440,17 @@
     .cancel-bt{
         padding-right: 3%;
     }
+    .valieCode,.valieCode2,.loginVal{            /* 验证码输入框 */
+        width: 460px;
+    }
+    .reginspan,.loginspan{
+        font-size: 14px;
+        color: white;
+        margin-left: 44%;
+    }
 }  
 
 
 
 
-
-/* 公共样式 */
-body{
-    text-align: center;
-    /* 禁止复制 */
-    -moz-user-select: none; /*火狐*/
-    -webkit-user-select: none; /*webkit浏览器*/
-    -ms-user-select: none; /*IE10*/
-    -khtml-user-select: none; /*早期浏览器*/
-    user-select: none;
-}
-.hide{
-    display: none;
-}
-.gtco-header{
-    padding-top: 300px;
-    height: 750px;
-    background-image: url('/imgs/headbg.jpg');
-    background-size: cover;
-    background-position: top center;
-    background-repeat: no-repeat;
-}
-.fadeIn{
-    color: white;
-    font-weight: bold;
-}
-.fadeIn p:nth-child(1){
-    font-family: "HK Grotesk Legacy";
-    color: #FFC576;
-    font-size: 40px;
-    line-height: 42px;
-    font-weight: 500;
-}
-.fadeIn p:nth-child(2){
-    font-size: 100px;
-    line-height: 100px;
-    font-family: "Playfair Display", serif;
-    margin: 12px 0 0;
-}
-.fadeIn p:nth-child(3){
-    font-family: "HK Grotesk Legacy";
-    font-size: 30px;
-    line-height: 30px;
-    font-weight: 500;
-    margin: 46px 0 0;
-}
 
