@@ -74,19 +74,49 @@ var loginFun = function(){
 
     //点击注册 链接
     $('.regin-a').click(function(){
-        $('.login-bt,.reginspan,.loginCode-bt,.submit-bt').hide();
+        $('.login-bt,.reginspan,.loginCode-bt,.submit-bt,.code-bt2').hide();
         $('.regin-bt,.pwd,.pwd2,.code-bt,.loginspan').show();
     });
     //点击登录 链接
     $('.login-a').click(function(){
-        $('.loginspan,.pwd2,.code-bt,.regin-bt,.submit-bt').hide();
+        $('.loginspan,.pwd2,.code-bt,.regin-bt,.submit-bt,.code-bt2').hide();
         $('.reginspan,.pwd,.login-bt,.loginCode-bt').show();
     });
 
      //点击忘记密码 链接
      $('.lock').click(function(){
-        $('.pwd,.pwd2,.loginCode-bt,.login-bt,.regin-bt').hide();
-        $('.code-bt,.submit-bt').show();
+        $('.pwd,.pwd2,.loginCode-bt,.login-bt,.regin-bt,.code-bt').hide();
+        $('.submit-bt,.code-bt2').show();
+    });
+
+    //点击获取邮箱验证码 注册
+    $('.getCode').click(function(){
+        let i = 60;
+        $('.getCode').addClass('stopClick');
+        let tim = setInterval(function(){
+            i = i-1;
+            $('.getCode').html(i + '秒后获取');
+            if(i == -1){
+                $('.getCode').html('获取验证码');
+                $('.getCode').removeClass('stopClick');
+                clearInterval(tim);
+            }
+        },1000);
+    });
+
+     //点击获取邮箱验证码 忘记密码
+     $('.getCode2').click(function(){
+        let i = 60;
+        $('.getCode2').addClass('stopClick');
+        let tim = setInterval(function(){
+            i = i-1;
+            $('.getCode2').html(i + '秒后获取');
+            if(i == -1){
+                $('.getCode2').html('获取验证码');
+                $('.getCode2').removeClass('stopClick');
+                clearInterval(tim);
+            }
+        },1000);
     });
 }
 
