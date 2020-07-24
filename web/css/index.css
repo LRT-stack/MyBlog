@@ -273,8 +273,8 @@ body{
         bottom: 0;
         background-color: transparent;
         color: rgb(255, 255, 255);
-        /* padding-right: 14%; */
-        background-color: black;
+        background: url('/imgs/loginbg.jpg') no-repeat;
+        background-size: cover;
     }
     .cancel-bt{
         height: 60px;
@@ -300,7 +300,7 @@ body{
         border-color: #FFFFFF;
         border-style: solid;
         -webkit-transform: matrix(-0.71, 0.71,0.71, 0.71, 0, 0);
-        transform: matrix(0.71, -0.71, -0.71, -0.71, 6, 1);   
+        transform: matrix(0.71, -0.71, -0.71, -0.71, 9, 1);   
     }
     .down:after{
         transform: matrix(-0.71, 0.71, -0.71, -0.71, 12, -4)!important;
