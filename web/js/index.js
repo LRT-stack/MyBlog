@@ -53,7 +53,11 @@ function menuFunMOB(){
 var loginFun = function(){
     //取消按钮
     $('.cancel-login').click(function(){        
-        $('.logindiv').animate({'top':'-500px'},'slow');
+        $('.logindiv').animate({'top':'-400px'},'slow');
+        setTimeout(() => {
+            $('.loginspan,.pwd2,.code-bt,.regin-bt,.submit-bt').hide();
+            $('.reginspan,.pwd,.login-bt,.loginCode-bt').show();
+        },2000);
     });
 
     //登录框弹出动画
@@ -63,12 +67,27 @@ var loginFun = function(){
 
     //登录框背景放大缩小动画
     $('.logindiv').mouseenter(function(){
-        $(this).animate({'background-size':'110%'},'slow');
+        $(this).animate({'background-size':'110%'},'fast');
     }).mouseleave(function(){
-        $(this).animate({'background-size':'100%'},'slow');
+        $(this).animate({'background-size':'100%'},'fast');
     });
 
-   
+    //点击注册 链接
+    $('.regin-a').click(function(){
+        $('.login-bt,.reginspan,.loginCode-bt,.submit-bt').hide();
+        $('.regin-bt,.pwd,.pwd2,.code-bt,.loginspan').show();
+    });
+    //点击登录 链接
+    $('.login-a').click(function(){
+        $('.loginspan,.pwd2,.code-bt,.regin-bt,.submit-bt').hide();
+        $('.reginspan,.pwd,.login-bt,.loginCode-bt').show();
+    });
+
+     //点击忘记密码 链接
+     $('.lock').click(function(){
+        $('.pwd,.pwd2,.loginCode-bt,.login-bt,.regin-bt').hide();
+        $('.code-bt,.submit-bt').show();
+    });
 }
 
 

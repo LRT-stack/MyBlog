@@ -83,11 +83,11 @@
     /*登录start*/
     .logindiv{
         position: fixed;
-        top : -500px;
-        right: 100px;
+        top : -400px;
+        right: 130px;
         /* left: 45%; */
-        width: 500px;
-        height: 500px;
+        width: 400px;
+        height: 400px;
         z-index: 900;
         background-color: #494657;
         border-radius: 10px;
@@ -101,17 +101,33 @@
     input{        /* 输入框去除边框 */
         outline:medium;
     }
-    .acc,.pwd{
+    .acc,.pwd,.pwd2,.valieCode,.loginVal{
         background: transparent;
         border : 0;
         border-bottom: 1px solid rgba(255, 255, 255, 0.9);
         width: 75%;
-        height: 40px;
+        height: 30px;
         margin-top: 10px;
         color: white;
     }
+    .code-bt,.loginCode-bt{
+        width: 100%;
+    }
+    .valieCode,.loginVal{            /* 验证码输入框 */
+        width: 190px;
+    }
+    .getVal,.getCode{                /* 获取验证码的按钮 */
+        color: rgba(255, 255, 255, 0.5);
+        background-color: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        cursor: pointer;
+        border-radius: 3px;
+        padding: 5px 3px;
+        font-size: 14px;
+        width: 110px;
+    }
     .login-form{
-        margin-top: 40px;
+        margin-top: 10px;
     }
     .lock-regin{
         margin-left: 12.5%;
@@ -128,15 +144,33 @@
         background-size: 20%;
     }
    
-    .regin{
+    .reginspan,.loginspan{
         font-size: 14px;
         color: white;
-        margin-left: 30%;
+        margin-left: 20%;
     }
-    .regin-a{
+    .regin-a,.login-a{
         font-weight: bold;
         cursor: pointer;
         color: #5d9cec!important;
+    }
+    .login-sub{
+        margin-top: 40px;
+    }
+
+    .login-bt,.regin-bt,.submit-bt{
+        margin-left: 12.5%;
+        width: 75%;
+        line-height: 35px;
+        background-color: transparent;
+        border-radius: 5px;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        color: rgba(255, 255, 255, 0.5);
+        cursor: pointer;
+    }
+    .login-bt:hover,.regin-bt:hover,.submit-bt:hover{
+        border: 1px solid rgba(255, 255, 255, 0.7);
+        color: rgba(255, 255, 255, 0.7);
     }
     /*登录end*/
 }
@@ -257,6 +291,9 @@
 /* 公共样式 */
 body{
     text-align: center;
+}
+.hide{
+    display: none;
 }
 .gtco-header{
     padding-top: 300px;
