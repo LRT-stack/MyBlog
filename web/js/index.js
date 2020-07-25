@@ -55,13 +55,13 @@ function menuFunMOB() {
         $('.menu-div').animate({ 'right': '-75%' }, 'slow'); //隐藏菜单
         $('.one-menu-mob li').removeClass('down');
         $('.two-menu-mob').hide();
-        setTimeout(function(){
+        setTimeout(function () {
             $('.mob-login-div').animate({ 'right': '0' }, 'slow'); //显示登录
-        },800)
+        }, 800)
     });
 
     //点击登录页面中的取消按钮
-    $('.cancel-login-mob').click(function(){
+    $('.cancel-login-mob').click(function () {
         $('.mob-login-div').animate({ 'right': '-100%' }, 'slow'); //显示登录
     });
 }
@@ -138,11 +138,46 @@ var loginFun = function () {
 }
 
 
+//博文数据
+let blogFun = function () {
+    let blognum = 0;        //博文总数
+    let fsnum = 0;          //粉丝总数
+    let llnum = 0;          //总浏览量
+
+    let t1 = setInterval(function () {
+        blognum += 5;
+        $('.blogNum').html(blognum);
+        if (blognum == 135) {
+            clearInterval(t1);
+        }
+    }, 100);
+
+
+    let t2 = setInterval(function () {
+        fsnum += 50;
+        $('.fsnum').html(fsnum);
+        if (fsnum == 1350) {
+            clearInterval(t2);
+        }
+    }, 100);
+
+    let t3 = setInterval(function () {
+        llnum += 50
+        $('.llnum').html(llnum);
+        if (llnum == 2700) {
+            clearInterval(t3);
+        }
+    }, 100);
+
+
+}
+
+
 
 menuFunPC();
 menuFunMOB();
 loginFun();
-
+blogFun();
 
 
 //禁止右键
